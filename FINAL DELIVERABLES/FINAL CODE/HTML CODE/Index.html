@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Nutrition Analyzer</title>
+        <link rel="stylesheet" href="/static/css/style.css">
+    </head>
+    <body>
+        <section class="sec">
+            <header>
+                <a href="#"><img src="/templates/logo1.png" class="logo"></a>
+            </header>
+            <div class="content">
+                <div class="textBox">
+                    <h2>Nutrition<br><span>Analyzer</span></h2>
+                    <p>The nutrients in our food play an essential role in the human organism. They provide the energy it needs to function, but also help to build, maintain and protect it.</p>
+                    <a href="http://localhost:5000/analyser" class="link">Classify</a>
+                </div>
+                <div class="imgBox">
+                    <img src="/templates/apple.png" class="apple"> 
+                </div>
+            </div>
+            <ul class="thumb">
+                <li><img src="/templates/apple.png" onclick="imgSlider('apple.png');changeBgcolor('#6e7172')"></li>
+                <li><img src="/templates/orange.png" onclick="imgSlider('orange.png');changeBgcolor('#012242')"></li>
+                <li><img src="/templates/banana.png" onclick="imgSlider('banana.png');changeBgcolor('#861799')"></li>
+                <li><img src="/templates/pineapple.png" onclick="imgSlider('pineapple.png');changeBgcolor('#563C0D')"></li>
+                <li><img src="/templates/watermelon.png" onclick="imgSlider('watermelon.png');changeBgcolor('#3A5F0B')"></li>
+            </ul> 
+            <ul class="sci">
+                <li><a href="#"><img src="/templates/facebook.png"></a></li>
+                <li><a href="#"><img src="/templates/instagram.png"></a></li>
+                <li><a href="#"><img src="/templates/twitter.png"></a></li>
+            </ul>
+        </section>
+        <script type="text/javascript">
+            function imgSlider(anything){
+                document.querySelector('.apple').src = anything;
+            }
+            function changeBgcolor(color){
+                const sec = document.querySelector('.sec');
+                sec.style.background = color;
+            }
+        </script>
+    </body>
+</html>
